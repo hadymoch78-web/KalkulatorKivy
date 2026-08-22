@@ -198,7 +198,7 @@ class Calculator(BoxLayout):
 
         buttons = [
             ("C", self.ORANGE),
-            ("⌫", self.ORANGE),
+            ("DEL", self.ORANGE),
             ("%", self.ORANGE),
             ("÷", self.ORANGE),
 
@@ -261,7 +261,7 @@ class Calculator(BoxLayout):
             self.result.text = ""
             return
 
-        if key == "⌫":
+        if key == "DEL":
             self.expression = self.expression[:-1]
             self.update_display()
             return
