@@ -21,6 +21,11 @@ jobs:
             pkg-config zlib1g-dev libncurses5-dev \
             libffi-dev libssl-dev
 
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libtool libltdl-dev autoconf automake
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
