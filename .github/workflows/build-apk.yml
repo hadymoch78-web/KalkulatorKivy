@@ -26,6 +26,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libtool libltdl-dev autoconf automake
 
+      - name: Install Cython
+        run: |
+          pip install Cython==0.29.33
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
